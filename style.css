@@ -1,0 +1,98 @@
+body {
+    background-color: lightgray;
+}
+
+.great-background {
+    background-color: #E5E5E5;
+    position: absolute;
+    width: 360px;
+    height: 1016px;
+
+}
+
+.status-bar {
+    /* status_bar */
+
+    /* position: absolute;  REVER ESSA REGRA NAO FICOU BOM COMO NO FIGMA*/
+    width: 328px;
+    height: 18px;
+    left: 16px;
+    top: 4px;
+
+}
+
+.status-bar-font {
+    /* 9:30 */
+
+    /* position: absolute; */
+    width: 27px;
+    height: 18px;
+    left: 16px;
+    top: 4px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #313131;
+}
+
+.username-top {
+    /* Olá Mariana Q */
+    /* background-color: aqua; */
+
+    /* position: absolute;  REVER ESSA REGRA NAO FICOU BOM COMO NO FIGMA*/
+    width: 193px;
+    height: 28px;
+    left: 16px;
+    top: 30px;
+    
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    
+    /* identical to box height */
+    
+    color: #313131;
+
+}
+
+.username-top-question {
+    /* O que você procura hoje? */
+
+    position: absolute;
+    width: 168px;
+    height: 18px;
+    left: 16px;
+    top: 66px;
+
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+
+    /* identical to box height */
+
+    color: #313131;
+
+    opacity: 0.5;
+}
+
+.img {
+    /* image 1 */
+
+position: absolute;
+border-radius: 15px;
+/* width: 282px; */
+height: 159px;
+left: 16px;
+top: 108px;
+
+background: url(image.png);
+
+}
