@@ -3,31 +3,41 @@ body {
 }
 
 .great-background {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
     background-color: #E5E5E5;
-    position: absolute;
+    border-radius: 14px;
+    /* position: absolute; */
     width: 360px;
     height: 1016px;
+	overflow-x: hidden;
 
 }
 
-.status-bar {
+.status-bar-container {
     /* status_bar */
 
     /* position: absolute;  REVER ESSA REGRA NAO FICOU BOM COMO NO FIGMA*/
-    width: 328px;
+    width: 346px;
     height: 18px;
-    left: 16px;
+    left: 24px;
     top: 4px;
 
 }
 
-.status-bar-font {
+.status-bar{
     /* 9:30 */
+	margin-left: 14px;
 
+	display: flex;
+    justify-content: space-between;
+	/* background-color: rebeccapurple; */
     /* position: absolute; */
-    width: 27px;
-    height: 18px;
-    left: 16px;
+    /* width: 27px;
+    height: 18px; */
+    left: 24px;
     top: 4px;
 
     font-family: 'Roboto';
@@ -39,6 +49,16 @@ body {
     color: #313131;
 }
 
+.status-bar-clock{
+	display: inline;
+	align-content: space-around;
+}
+
+.status-bar-connections{
+	display: inline;
+    margin-top: 14px;
+}
+
 .username-top {
     /* Olá Mariana Q */
     /* background-color: aqua; */
@@ -46,7 +66,7 @@ body {
     /* position: absolute;  REVER ESSA REGRA NAO FICOU BOM COMO NO FIGMA*/
     width: 193px;
     height: 28px;
-    left: 16px;
+    margin-left: 14px;
     top: 30px;
     
     font-family: 'Quicksand';
@@ -67,7 +87,7 @@ body {
     position: absolute;
     width: 168px;
     height: 18px;
-    left: 16px;
+    /* left: 24px; */
     top: 66px;
 
     font-family: 'Quicksand';
@@ -83,16 +103,52 @@ body {
     opacity: 0.5;
 }
 
+.bold-font-hearth-logo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bold-fonts{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+
+}
+
+.hearth-icon{
+    height: 20px;
+    line-height: 20px;
+    margin-top: 14px;
+}
+
+.carrousel-group {
+	display: flex;
+	margin-top: 48px;
+	margin-left: 14px;
+}
+
+.carrousel-first-image {
+	display: block;
+}
+
+.carrousel-second-image {
+	display: block;
+	margin-left: 14px;
+}
+
+
 .img {
     /* image 1 */
+    display: block;
+    /* position: absolute; */
+    border-radius: 15px;
+    /* width: 282px; */
+    height: 159px;
+    left: 16px;
+    top: 108px;
 
-position: absolute;
-border-radius: 15px;
-/* width: 282px; */
-height: 159px;
-left: 16px;
-top: 108px;
-
-background: url(image.png);
+    background: url(image.png);
 
 }
