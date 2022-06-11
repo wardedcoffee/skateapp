@@ -8,12 +8,22 @@ body {
     margin-right: auto;
     
     background-color: #FAFAFA;
-    border-radius: 14px;
+    border-radius: 14px 14px 0px 0px;
     width: 360px;
-    height: 1016px;
+    /* height: 672px; */
 	overflow-x: hidden;
+    overflow-y: hidden;
 
 }
+
+.scroller {
+    /* width: 360px; */
+    height: 648px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+  }
+  
 
 .status-bar-container {
     width: 346px;
@@ -229,6 +239,38 @@ body {
     width: auto;    
 }
 
+.bottom-menu{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    width: 332px;
+
+    /* para o z-index funcionar, o valor de position deve ser diferente de 'static'.
+    por padrao todos elementos recebem o valor implicito de "z-index: auto".
+    */
+    position: fixed;
+    z-index: 1;
+    margin-top: calc(70% - 80px);
+    padding: 14px;
+
+    background-color: #FFFFFF;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.highlights-icon{
+    width: 72px;
+    height: 42px;
+}
+
+.favorite-icon{
+    width: 64px;
+    height: 42px;
+}
+
+.profile-icon{
+    width: 36px;
+    height: 42px;
+}
 
 
 
