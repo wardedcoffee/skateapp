@@ -1,5 +1,6 @@
 body {
     background-color: lightgray;
+    height: 900px;
 }
 
 .great-background {
@@ -250,7 +251,7 @@ body {
     */
     position: fixed;
     z-index: 1;
-    margin-top: calc(70% - 80px);
+    /* margin-top: calc(70% - 80px); */
     padding: 14px;
 
     background-color: #FFFFFF;
