@@ -273,5 +273,66 @@ body {
     height: 42px;
 }
 
+/* VIDEO - HTML */
 
+.top-menu-video {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: rebeccapurple; */
 
+    margin-top: 12px;
+    padding: 0px 12px 0px 12px;
+    /* height: 40px; */
+}
+
+.arrow-back {
+    width: 18px;
+    height: 18px;
+    margin-top: 16px;
+}
+
+.large-card-video-info{
+    height: 528px;
+}
+
+.img-video-large {
+    position: sticky;
+    /* z-index: 1; */
+   
+    height: 266px;
+    left: 0px;
+    top: 74px;
+}
+
+.floating-play-button {
+    /* display: block; */
+    position: absolute;
+    z-index: 1;
+    margin-top: 229px;
+    margin-left: 277px;
+}
+
+.card-info-video-large {
+    /* background-color: #33EEDD; */
+    padding: 2px;
+}
+
+.video-large-info {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+
+    /* margin: 10px 0px 0px 0px; */
+}
+
+.colored-bold-fonts {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+
+    color: #33EEDD;
+
+}
