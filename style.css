@@ -66,7 +66,6 @@ body {
     width: 193px;
     height: 28px;
     margin-left: 14px;
-    top: 30px;
     
     font-family: 'Quicksand';
     font-style: normal;
@@ -102,7 +101,7 @@ body {
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
-    line-height: 18px;
+    line-height: 20px;
 
 }
 
@@ -323,6 +322,8 @@ body {
     font-weight: 400;
     font-size: 16px;
 
+    line-height: 26px;
+
     /* margin: 10px 0px 0px 0px; */
 }
 
@@ -347,4 +348,91 @@ body {
 
 .large-card-favoritos-info {
     height: 38px;
+}
+
+/* PERFIL - HTML */
+
+.ellipse-image-perfil {
+    width: 88px;
+    height: 88px;
+}
+
+.card-perfil{
+    width: 294px;
+    height: 111px;
+    margin-top: 16px;
+    margin-left: 14px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.username-top-ellipse{
+    width: 193px;
+    height: 28px;
+    margin: 20px 0 0 0;
+    /* margin-left: 14px; */
+    
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    color: #313131;
+}
+
+.personal-info-container{
+    margin-left: 16px;
+
+}
+
+.division-line{
+    position: absolute;
+    width: 328px;
+    height: 1px;
+
+    background: #313131;
+    opacity: 0.1;
+}
+
+.faded-label-font{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+
+    color: #313131;
+    opacity: 0.5;
+
+    margin: 0;
+}
+
+.personal-info-font{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    margin: 0;
+    color: #313131;
+}
+
+.personal-info-label-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 0 16px 0;
+}
+
+.personal-info-label-box{
+    margin-top: 16px;
+}
+
+.chevron-right{
+    margin: 26px 16px 0 0;
+}
+
+.exit-to-app{
+    margin: 16px 12px 0 0;
 }
