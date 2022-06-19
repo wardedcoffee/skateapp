@@ -342,3 +342,9 @@ body {
 .large-card-marca-info {
     height: 410px;
 }
+
+/* FAVORITOS - HTML */
+
+.large-card-favoritos-info {
+    height: 38px;
+}
