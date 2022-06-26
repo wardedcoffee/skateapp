@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skate App - Perfil</title>
+    <title>Skate App - Editar informacao</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,8 +34,27 @@
             </div>
         </div>
         <main class="scroller">
+            
+            <div class="keyboard-overlay">
+                <div class="personal-info-label-container">
+                    <div class="personal-info-label-box">
+                        <span class="modal-close-element"></span>
+
+                        <p class="faded-label-font">Nome</p>
+
+                        <input class="personal-info-input" placeholder="Mariana Quaresma" type="text">
+
+                        <span class="colored-division-line"></span>
+
+                        <button class="button" type="submit">Salvar</button>
+                    </div>
+
+
+                </div>
+            </div>
             <div class="card-perfil">
                 <img class="ellipse-image-perfil" src="./assets/Ellipse.png" alt="capa de album sonoro com os dizeres: Cover Version">
+                
                 <div class="">
                     <div class="">
                         <p class="username-top-ellipse">Mariana Q.</p>
@@ -47,6 +66,7 @@
                     </div>    
                 </div>
             </div>
+
 
             <div class="personal-info-container">
                 <div>
@@ -62,14 +82,9 @@
                         <p class="personal-info-font">Mariana Quaresma</p>
                     </div>
                     <div>
-                        <img onclick="editInfo()" class="chevron-right" src="./assets/icons/chevron_right.png" alt="seta indicadora para direita">
+                        <img class="chevron-right" src="./assets/icons/chevron_right.png" alt="seta indicadora para direita">
                     </div>
                 </div>
-                <script>
-                    function editInfo () {
-                        window.open("./editar_informacao.html", "_self");
-                    }
-                </script>
                 
                 
                 <div class="personal-info-label-container">
@@ -119,13 +134,13 @@
 
 
         </main>
-        <footer>
+        <!-- <footer>
             <div class="bottom-menu">
                 <img class="highlights-icon" src="./assets/icons/highlights_bottom_menu.png" alt="icone de uma chama e a palavra destaques abaixo">
                 <img class="favorite-icon" src="./assets/icons/favorites_bottom_menu.png" alt="icone de coracao e a palavra favoritos abaixo">
                 <img class="profile-icon" src="./assets/icons/profile_bottom_menu.png" alt="icone de uma pessoa e a palavra perfil escrita abaixo">
             </div>
-        </footer>
+        </footer> -->
     </div>
     
 </body>

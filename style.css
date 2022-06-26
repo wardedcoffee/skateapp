@@ -436,3 +436,87 @@ body {
 .exit-to-app{
     margin: 16px 12px 0 0;
 }
+
+
+/* EDITAR INFORMACOES - HTML */
+
+.keyboard-overlay{
+    width: 332px;
+    height: 642px;
+    padding: 14px;
+    background-color: #FFFFFF;
+
+    margin-top: 50px;
+    position: fixed;
+    z-index: 1;
+
+    border-radius: 12px 12px 12px 12px;
+
+}
+
+.personal-info-input:focus{
+        outline: none /* Removes the border when the input is clicked */
+}
+
+.personal-info-input{
+    display: block;
+    border: none;
+
+    caret-color: #33EEDD;
+    -webkit-appearance: none;
+
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #313131;
+}
+
+.personal-info-input::after{
+    border: none;
+}
+
+.colored-division-line{
+    display: block;
+
+    position: absolute;
+    width: 328px;
+    height: 1px;
+
+    background: #33EEDD;
+    /* opacity: 0.1; */
+}
+
+.button{
+    position: absolute;
+    width: 328px;
+    height: 56px;
+    margin-top: 50px;
+
+    background: #33EEDD;
+    border-radius: 8px;
+    border: none;
+
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+
+.modal-close-element{
+    position: absolute;
+    width: 32px;
+    height: 8px;
+    left: 164px;
+    top: 16px;
+
+    background: #33EEDD;
+    border-radius: 200px;
+}
