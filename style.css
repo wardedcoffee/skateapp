@@ -4,9 +4,9 @@ body {
 }
 
 .great-background {
-    display: block;
+    /* display: block;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; */
     
     background-color: #FAFAFA;
     border-radius: 14px 14px 0px 0px;
@@ -490,10 +490,10 @@ body {
 }
 
 .button{
-    position: absolute;
+    /* position: absolute; */
     width: 328px;
     height: 56px;
-    margin-top: 50px;
+    /* margin-top: 50px; */
 
     background: #33EEDD;
     border-radius: 8px;
@@ -520,3 +520,70 @@ body {
     background: #33EEDD;
     border-radius: 200px;
 }
+
+/* LOGIN - HTML */
+
+.status-bar-login{
+    /* 9:30 */
+	margin-left: 14px;
+    position: absolute;
+    z-index: 1;
+
+	display: flex;
+    justify-content: space-between;
+    left: 24px;
+    top: 4px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #313131;
+}
+
+.img-login-large {
+    position: sticky;
+    /* z-index: 1; */
+   
+    /* height: 266px; */
+    left: 0px;
+    /* top: 74px; */
+}
+
+.logo-buttons-container{
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-gap: 16px;
+    /* justify-content: space-between; */
+    margin-left: 16px;
+}
+
+.skate-videos-logo{
+    /* display: block; */
+    width: 172px;
+    margin: 16px 40px 0px 80px;
+}
+
+.button-google{
+        /* position: absolute; */
+        width: 328px;
+        height: 56px;
+        /* margin-top: 50px; */
+    
+        background: #DD4B39;
+        border-radius: 8px;
+        border: none;
+    
+        font-family: 'Quicksand';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        
+        text-align: center;
+        
+        color: #FFFFFF;
+}
+
