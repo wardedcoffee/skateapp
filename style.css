@@ -63,7 +63,7 @@ body {
 }
 
 .username-top {
-    width: 193px;
+    /* width: 193px; */
     height: 28px;
     margin-left: 14px;
     
@@ -454,14 +454,14 @@ body {
 
 }
 
-.personal-info-input:focus{
-        outline: none /* Removes the border when the input is clicked */
-}
-
 .personal-info-input{
     display: block;
     border: none;
-
+    width: 300px;
+     
+    outline: none; /* Removes the border when the input is clicked */
+    background-color: transparent;
+    border: none;
     caret-color: #33EEDD;
     -webkit-appearance: none;
 
@@ -474,9 +474,6 @@ body {
     color: #313131;
 }
 
-.personal-info-input::after{
-    border: none;
-}
 
 .colored-division-line{
     display: block;
@@ -587,3 +584,18 @@ body {
         color: #FFFFFF;
 }
 
+/* CADASTRO - HTML */
+
+/* REMOVE AS SETAS PARA CIMA E PARA BAIXO DOS IMPUT TIPO NUMBER */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* REMOVE AS SETAS PARA CIMA E PARA BAIXO DOS IMPUT TIPO NUMBER */
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
