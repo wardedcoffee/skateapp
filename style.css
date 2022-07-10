@@ -102,7 +102,6 @@ body {
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
-
 }
 
 .video-info-card{
@@ -598,4 +597,109 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+.visibility-eye{
+    margin: 16px 12px 0 0;
+}
+
+/* BUSCA VAZIA */
+
+.search-icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 16px;
+}
+
+.close-icon{
+    width: 20px;
+    height: 20px;
+    margin-left: 16px;
+}
+
+.search-input-close-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.search-input{
+    display: block;
+    border: none;
+    width: 244px;
+     
+    outline: none; /* Removes the border when the input is clicked */
+    background-color: transparent;
+    border: none;
+    caret-color: #33EEDD;
+    -webkit-appearance: none;
+
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #313131;
+}
+
+.search-text-container{
+    display: grid;
+    margin-top: 32px;
+    /* background-color: red; */
+    grid-gap: 10px;
+    justify-content: start;
+    margin-left: 16px;
+}
+
+
+.search-icon-background{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    
+    background-color: #3131311e;
+    /* opacity: 0.1; */
+
+    position: sticky;
+    z-index: 1;
+
+    /* UMA FORMA DE CENTRALIZAR ELEMENTOS */
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.search-icon-greater{
+    /* UMA FORMA DE CENTRALIZAR ELEMENTOS */
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+
+    position: sticky;
+
+    padding-top: 14px;
+    width: 20px;
+    height: 20px;
+    margin-top: 14px;
+}
+
+.bold-fonts-centralized{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+
+    text-align: center;
+}
+
+.paragraph-normal-centralized{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+
+    margin: 0;
+    text-align: center;
 }

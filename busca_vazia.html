@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skate App - Cadastro</title>
+    <title>Skate App - Busca Vazia</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,48 +28,51 @@
         <header>
 
         </header>
-        <div class="large-card-favoritos-info">            
+        <!-- <div class="large-card-favoritos-info">            
             <div>
                 <p class="username-top">Insira suas informações</p>
             </div>
-        </div>
+        </div> -->
         <main class="scroller">
             <div class="personal-info-container">
                 <div class="personal-info-label-container">
+
                     <div class="personal-info-label-box">
-                        <label for="fname" class="faded-label-font">Nome</label>
-                        <input class="personal-info-input" type="text" id="fname" name="fname" placeholder="Nome">
+                        <div class="search-input-close-container">
+                            <img class="search-icon" src="./assets/icons/search.png" alt="icone de busca">
+                            <input class="search-input" type="text" id="search" name="search" placeholder="Busca">
+                            <img class="close-icon" src="./assets/icons/close.png" alt="icone que faz sair da sua conta">
+                        </div>
+                        <span class="colored-division-line"></span>
                     </div>
-                </div>   
-                <div class="personal-info-label-container">
-                    <span class="division-line"></span>
-                    <div class="personal-info-label-box">
-                        <label for="telephone" class="faded-label-font">Telefone</label>
-                        <input class="personal-info-input" type="number" id="telephone" name="telephone" placeholder="telefone">
-                    </div>
-                </div>    
-                <div class="personal-info-label-container">
-                    <span class="colored-division-line"></span>
-                    <div class="personal-info-label-box">
-                        <label for="email" class="faded-label-font">E-mail</label>
-                        <input class="personal-info-input" type="text" id="email" name="email" placeholder="E-mail">
-                    </div>
-                </div>
-                <div class="personal-info-label-container">
-                    <span class="division-line"></span>
-                    <div class="personal-info-label-box">
-                        <label for="password" class="faded-label-font">Senha</label>
-                        <input class="personal-info-input" type="password" id="password" name="password" placeholder="senha">
-                        <span class="division-line"></span>
-                    </div>
-                    <div>
-                        <img class="visibility-eye" src="./assets/icons/visibility.png" alt="icone que mostra sua senha">
-                    </div>
-                </div>
-                <div>
-                    <button class="button" type="submit">Finalizar cadastro</button>
+
                 </div>
             </div>
+            
+            <section class="search-text-container">
+            <div>
+                <span class="search-icon-background">
+                    <img class="search-icon-greater" src="./assets/icons/search.png" alt="">
+                </span>
+            </div>
+            <div style="margin-bottom: 24px;">
+                <p class="bold-fonts-centralized">
+                    Não encontramos nenhum resultado
+                    para sua pesquisa
+                </p>
+
+                <p class="paragraph-normal-centralized">
+                    Por favor, verifique o termo digitado e
+                    tente novamente
+                </p>
+            </div>
+
+
+                <div>
+                    <button class="button" type="submit">Pesquisar novamente</button>
+                </div>
+
+            </section>
 
         </main>
         <footer>
