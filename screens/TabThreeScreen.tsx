@@ -8,8 +8,6 @@ export default function TabThreeScreen() {
         <View style={styles.container}>
             <ScrollView>
                 <EmailForm />
-
-                {/* <SavedProfile /> */}
             </ScrollView>
         </View>
     );

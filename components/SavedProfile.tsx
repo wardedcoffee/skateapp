@@ -138,18 +138,6 @@ export default function SavedProfile() {
                 </View>
                 <View style={{ flexDirection: "row" }}>
                     <ExitApp />
-                    {/* <Pressable
-        onPress={() => navigation.navigate('Modal2')}
-        style={({ pressed }) => ({
-            opacity: pressed ? 0.5 : 1,
-        })}>
-        <MaterialIcons
-            name="info-outline"
-            size={20}
-            // color={Colors[colorScheme].text}
-            style={{ marginRight: 15 }} />
-        </Pressable><Button title="Exit App" onPress={() => handleExitApp({ navigation })} /> */}
-                    {/* <MaterialIcons name={'exit-to-app'} size={24} color={'tintColorLight'} style={{ marginLeft: 10, marginBottom: 20 }} /> */}
                 </View>
             </View>
         </>
