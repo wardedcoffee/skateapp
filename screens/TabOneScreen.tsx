@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { StyleSheet, Image, ScrollView } from 'react-native';
-// import { MaterialIcons } from '@expo/vector-icons';
 
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
-import FavoriteButton from '../components/FavoriteButton';
 
-import CardShadow  from '../components/CardShadow';
 import SwiperComponent from '../components/SwiperComponent';
 import { MaterialIcons } from '@expo/vector-icons';
+import MovieList from '../components/MovieList';
 
 export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
   return (
@@ -23,22 +21,13 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
       </View>
       <ScrollView>
         <SwiperComponent/>
-        {/* <View style={styles.card}>
-           
-         
-        </View> */}
 
         <View style={styles.containerTabsText}>
           <Text style={styles.tabSelected}>Lancamentos</Text>
           <Text style={styles.tabNotSelected}>Trilhas sonoras</Text>
           <Text style={styles.tabNotSelected}>Destaque</Text>
         </View>
-
-        <CardShadow></CardShadow>
-        <CardShadow></CardShadow>
-        <CardShadow></CardShadow>
-        <CardShadow></CardShadow>
-
+        <MovieList/>
       </ScrollView>
 
     </View>
@@ -48,7 +37,7 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // marginLeft: 14,
+    // marginLeft: 34,
     // alignItems: 'center',
     // justifyContent: 'center',
     // backgroundColor: '#red'

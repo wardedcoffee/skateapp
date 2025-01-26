@@ -7,6 +7,7 @@ const FavoriteButtonCard = () => {
 
   const handlePress = () => {
     setIsFavorite(!isFavorite);
+    console.log('fui clicado, movendo para favoritos');
   };
 
   return (
@@ -15,9 +16,8 @@ const FavoriteButtonCard = () => {
         <MaterialIcons
           name={isFavorite ? 'favorite' : 'favorite-border'}
           size={24}
-          color={isFavorite ? 'red' : '#828A9B'}
+          color={isFavorite ? 'black' : '#828A9B'}
           style={{ marginTop: 8 }}
-        //   style={{ marginRight: 60, marginTop: 10 }}
         />
       </View>
     </TouchableOpacity>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TextInput, Button, StyleSheet, TouchableOpacity } from "react-native";
+import { TextInput, Button, StyleSheet, TouchableOpacity, Pressable } from "react-native";
 import { Text, View } from "../components/Themed";
 import * as FileSystem from "expo-file-system";
 import Toast from "react-native-root-toast";
@@ -278,7 +278,13 @@ export default function EmailForm() {
                 </View>
             </TouchableOpacity>
           ) : (
-            <Button title="Salvar" onPress={saveForm} />
+            <>
+            
+            {/* <Button title="Finalizar cadastro" onPress={saveForm} /> */}
+            
+            <Pressable style={styles.buttonDefault} onPress={saveForm}>
+              <Text style={styles.textButtons}>Finalizar cadastro</Text>
+            </Pressable></>
           )}
       </View>
     </View>
@@ -320,6 +326,23 @@ const styles = StyleSheet.create({
     borderColor: "#000000",
     borderBottomWidth: 1,
     marginBottom: 36,
+  },
+  textButtons:{
+    textAlign: 'center',
+    fontFamily: 'quicksand-bold',
+    // fontWeight: '700',
+    fontSize: 16,
+    color: '#fff',
+    margin: 0,
+  },
+  buttonDefault: {
+    // width: 300,
+    padding: 20,
+    // margin: 10,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: '#f0f0f0',
+    backgroundColor: '#33EEDD',
+    borderRadius: 8
   },
   btnContainer: {
     backgroundColor: "white",
