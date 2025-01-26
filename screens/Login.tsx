@@ -16,7 +16,7 @@ export default function Login() {
   return (
     <View>
       <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
-      <Image  style={{ resizeMode: 'cover', }}  source={require('../assets/images/image_7.png')}></Image>
+      <Image  style={{ resizeMode: 'cover', maxHeight: 500}}  source={require('../assets/images/pexels_tima_miro.jpg')}></Image>
       <View style={styles.container}>
         <Image source={require('../assets/images/SkateAppLogo.png')}></Image>
         <Pressable style={styles.buttonGoogle} onPress={onPressFunctionGoogle}>
@@ -26,13 +26,15 @@ export default function Login() {
           <Text style={styles.textButtons}>Entrar com e-mail</Text>
         </Pressable>
       </View>
+      {/* <Text>Photo by Tima Miroshnichenko: https://www.pexels.com/photo/a-group-of-people-sitting-on-wooden-bleachers-holding-smartphones-5560297/</Text> */}
+      
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
+    //flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'column',
@@ -66,7 +68,7 @@ const styles = StyleSheet.create({
     margin: 10,
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: '#f0f0f0',
-    backgroundColor: 'tintColorLight',
+    backgroundColor: '#33EEDD',
     borderRadius: 8
   },
   separator: {

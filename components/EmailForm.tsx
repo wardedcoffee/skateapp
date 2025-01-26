@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { TextInput, Button, StyleSheet } from "react-native";
+import { TextInput, Button, StyleSheet, TouchableOpacity } from "react-native";
 import { Text, View } from "../components/Themed";
 import * as FileSystem from "expo-file-system";
 import Toast from "react-native-root-toast";
 import ImagePicker from "./ImagePicker";
 import { MaterialIcons } from "@expo/vector-icons";
-import ExitApp from "../components/ExitToApp.tsx";
+import { useNavigation } from "@react-navigation/native";
 
 export default function EmailForm() {
   const [email, setEmail] = useState("");
@@ -14,6 +14,14 @@ export default function EmailForm() {
   const [password, setPassword] = useState("");
 
   const [isSaved, setIsSaved] = useState(false);
+
+   const [isExit, setIsExit] = useState(false);
+      const navigation = useNavigation();
+      const handlePress = () => {
+          setIsExit(!isExit);
+          console.log('vou sairrrrrr!');
+           navigation.navigate('Login')    
+      };
 
   const saveForm = async () => {
     try {
@@ -40,7 +48,8 @@ export default function EmailForm() {
       }
 
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      const phoneRegex = /^\d{10}$/;
+      const phoneRegex = /^(?:\+?55)?\d{10,11}$/;   // Matches +5511977818925 or 11977818925
+
 
       function validateEmail(email: string) {
         return emailRegex.test(email);
@@ -67,7 +76,7 @@ export default function EmailForm() {
         // setPassword('');
       } else {
         let toast = Toast.show(
-          "Please check the entered data. Ensure email and phone number are valid.",
+          "Por favor verifique os dados. Tenha certeza de que o email e telefone são válidos.",
           {
             duration: Toast.durations.LONG,
           },
@@ -82,11 +91,11 @@ export default function EmailForm() {
       console.error(err);
     }
 
-    console.log(`'Form data saved!'` + name + phone + email + password);
+    console.log(`'Formulário salvo!'` + name + phone + email + password);
     setIsSaved(!isSaved);
 
     let toast2 = Toast.show(
-      `'Form data saved!'` + name + phone + email + password,
+      `'Formulário salvo!'`,
       {
         duration: Toast.durations.LONG,
       },
@@ -133,9 +142,8 @@ export default function EmailForm() {
       >
         <View style={{ flexDirection: "column" }}>
           <Text style={styles.labelPerfil}>Nome</Text>
-          {/* <Text style={styles.infoPerfil}>Mariana Quaresma</Text> */}
           <TextInput
-            placeholder="Enter name"
+            placeholder="Seu nome"
             value={name}
             onChangeText={setName}
             style={styles.infoPerfil}
@@ -166,7 +174,7 @@ export default function EmailForm() {
         <View style={{ flexDirection: "column" }}>
           <Text style={styles.labelPerfil}>Telefone</Text>
           <TextInput
-            placeholder="Enter phone number"
+            placeholder="(xx) xxxxx xxxx"
             value={phone}
             onChangeText={setPhone}
             keyboardType="phone-pad"
@@ -198,7 +206,7 @@ export default function EmailForm() {
         <View style={{ flexDirection: "column" }}>
           <Text style={styles.labelPerfil}>Email</Text>
           <TextInput
-            placeholder="Enter email address"
+            placeholder="Seu email"
             value={email}
             onChangeText={setEmail}
             keyboardType="email-address"
@@ -233,7 +241,7 @@ export default function EmailForm() {
         <View style={{ flexDirection: "column" }}>
           <Text style={styles.labelPerfil}>Senha</Text>
           <TextInput
-            placeholder="Enter password"
+            placeholder="Sua senha"
             value={password}
             onChangeText={setPassword}
             secureTextEntry
@@ -249,20 +257,30 @@ export default function EmailForm() {
           />
         </View>
       </View>
+
       <View
-        style={{
-          flexDirection: "row",
-          justifyContent: "space-between",
-        }}
-      >
-        <View>
-            {isSaved ? (
-                <ExitApp />
-            ) : (
-              <Button title="Save" onPress={saveForm} />
-            )}
-        </View>
-     </View>
+        style={styles.separator}
+        lightColor="#313131"
+        darkColor="rgba(255,255,255,0.1"
+      />
+
+      <View>
+          {isSaved ? (
+              <TouchableOpacity onPress={(handlePress)}>
+                <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+                  <Text style={{ fontFamily: "quicksand-regular", fontSize: 16, lineHeight: 20, margin: 0 }}>Sair da minha conta</Text>
+                  <MaterialIcons 
+                    name={'exit-to-app'}
+                    size={24}
+                    color={isExit ? '#33EEDD' : '#176E66'   } 
+                    style={{ marginLeft: 10, marginBottom: 20 }}
+                    />
+                </View>
+            </TouchableOpacity>
+          ) : (
+            <Button title="Salvar" onPress={saveForm} />
+          )}
+      </View>
     </View>
   );
 }
@@ -272,9 +290,6 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingLeft: 16,
     paddingRight: 16,
-    // backgroundColor: '#FAFAFA',
-    // alignItems: 'center',
-    // justifyContent: 'center',
   },
   card: {
     marginBottom: 48,
@@ -297,7 +312,6 @@ const styles = StyleSheet.create({
   tabSelected: {
     fontFamily: "quicksand-bold",
     fontSize: 16,
-    // color: '#313131',
     marginRight: 22,
     marginBottom: 0,
   },
@@ -317,29 +331,24 @@ const styles = StyleSheet.create({
     lineHeight: 28,
     marginTop: 10,
     marginBottom: 8,
-    // fontWeight: 'bold',
-    // color: 'black'
   },
   videoInfo: {
     fontFamily: "quicksand-regular",
     fontSize: 14,
     lineHeight: 18,
-    // margin: 0,
-    // color: 'black'
   },
   labelPerfil: {
     fontFamily: "quicksand-light",
     fontSize: 12,
     lineHeight: 15,
     marginBottom: 4,
-    // opacity: 70,
   },
   infoPerfil: {
     fontFamily: "quicksand-regular",
     fontSize: 16,
     lineHeight: 20,
     margin: 0,
-    // opacity: 50,
+    width: 200,
   },
   separator: {
     marginVertical: 16,
