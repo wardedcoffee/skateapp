@@ -1,12 +1,18 @@
 import React from 'react';
-import { StyleSheet, Image, ScrollView } from 'react-native';
+import { StyleSheet, Image, ScrollView, FlatList } from 'react-native';
 
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 
-import SwiperComponent from '../components/SwiperComponent';
 import { MaterialIcons } from '@expo/vector-icons';
 import MovieList from '../components/MovieList';
+import FavoriteButtonCard from '../components/FavoriteButtonCard';
+
+const images = [
+  { id: '1', imageUrl: 'https://th.bing.com/th/id/OIP.bMOrQyIjBZQ619YhLYea9wHaEW?w=296&h=180&c=7&r=0&o=5&pid=1.7', title: 'Bunker Down', subTitle: 'Alien Workshop', year: 2019, length: '37 min' },
+  { id: '2', imageUrl: 'https://th.bing.com/th/id/OIP.tCgAR_tMNQ2ji5YgG2g6-QHaIl?w=200&h=182&c=7&r=0&o=5&pid=1.7', title: 'Mother', subTitle: 'Quasi Skateboards', year: 2019, length: '37 min' },
+  { id: '3', imageUrl: 'https://blog.slamcity.com/wp-content/uploads/2019/06/PHOTO-2019-06-24-13-45-04-1.jpg', title: 'Trust Fall', subTitle: 'Alien Workshop', year: 2019, length: '37 min' },
+];
 
 export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
   return (
@@ -20,8 +26,34 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
         <Text style={styles.usernameTopQuestion}>O que voce procura hoje?</Text>
       </View>
       <ScrollView>
-        <SwiperComponent/>
-
+        <FlatList
+          horizontal
+          // pagingEnabled
+          data={images}
+          style={styles.flatlist}
+          keyExtractor={image => image.id}
+          snapToOffsets={[...Array(images.length).keys()].map(i => i * 328)}
+          showsHorizontalScrollIndicator={false}
+          renderItem={({item}) => {
+            return (
+              <View style={styles.imageContainer}>
+                <Image style={styles.image} source={{uri: item.imageUrl}} />
+                  <View style={{ flexDirection: 'row' }}>
+                    <Text style={styles.title}>{item.title}</Text>
+                    <View style={{ position: 'absolute', right: 2 }} >
+                        <FavoriteButtonCard />
+                    </View>
+                  </View>
+                  <View style={{ flexDirection: 'row' }}>
+                    <Text style={styles.videoInfo}>{item.subTitle} * </Text>
+                    <Text style={styles.videoInfo}>{item.year} * </Text>
+                    <Text style={styles.videoInfo}>{item.length}</Text>
+                  </View>
+              </View>
+            );
+          }}
+        />
+    
         <View style={styles.containerTabsText}>
           <Text style={styles.tabSelected}>Lancamentos</Text>
           <Text style={styles.tabNotSelected}>Trilhas sonoras</Text>
@@ -41,6 +73,21 @@ const styles = StyleSheet.create({
     // alignItems: 'center',
     // justifyContent: 'center',
     // backgroundColor: '#red'
+  },
+  image: {
+    width: 328,
+    height: 200,
+    borderRadius: 8,
+  },
+  imageContainer: {
+    marginHorizontal: 16,
+    marginVertical: 16,
+    borderRadius: 8,
+  },
+  flatlist: {
+    // backgroundColor: 'red',
+    // marginHorizontal: 16,
+    // marginVertical: 16,
   },
   card:{
     marginBottom: 48,
@@ -83,8 +130,11 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: 'quicksand-bold',
-    fontSize: 22,
-    marginBottom: 3,
+        fontSize: 16,
+        lineHeight: 20,
+        marginTop: 10,
+        // marginRight: 82,
+        marginBottom: 8,
   },
   usernameTopQuestion:{
     fontFamily: 'quicksand-regular',
@@ -145,3 +195,5 @@ const styles = StyleSheet.create({
     marginLeft: 16
   },
 });
+
+
