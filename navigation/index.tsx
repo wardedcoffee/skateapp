@@ -79,54 +79,30 @@ function BottomTabNavigator() {
       <BottomTab.Screen
         name="TabOne"
         component={TabOneScreen}
-        options={({ navigation }: RootTabScreenProps<'TabOne'>) => ({
+        options={() => ({
+          headerShown: false,
           title: 'Destaques',
           tabBarIcon: ({ color }) => <TabBarIcon name="whatshot" color={color} />,
-          // headerRight: () => (
-          //   <Pressable
-          //     onPress={() => navigation.navigate('Modal')}
-          //     style={({ pressed }) => ({
-          //       opacity: pressed ? 0.5 : 1,
-          //     })}>
-          //     <MaterialIcons
-          //       name="info-outline"
-          //       size={20}
-          //       color={Colors[colorScheme].text}
-          //       style={{ marginRight: 15 }}
-          //     />
-          //   </Pressable>
-          // ),
         })}
       />
       <BottomTab.Screen
         name="TabTwo"
         component={TabTwoScreen}
-        options={{
+        options={() => ({
+          headerShown: false,
           title: 'Favoritos',
           tabBarIcon: ({ color }) => <TabBarIcon name="favorite-border" color={color} />,
-        }}
+        })}
       />
       <BottomTab.Screen
         name="TabThree"
         component={TabThreeScreen}
         // options={{
-          options={({ navigation }: RootTabScreenProps<'TabThree'>) => ({
+          options={() => ({
+          headerShown: false,
           title: 'Perfil',
           tabBarHideOnKeyboard: true,
           tabBarIcon: ({ color }) => <TabBarIcon name='person-outline' color={color} />,
-          // headerRight: () => (
-          //   <><Pressable
-          //     onPress={() => navigation.navigate('Modal2')}
-          //     style={({ pressed }) => ({
-          //       opacity: pressed ? 0.5 : 1,
-          //     })}>
-          //     <MaterialIcons
-          //       name="info-outline"
-          //       size={20}
-          //       color={Colors[colorScheme].text}
-          //       style={{ marginRight: 15 }} />
-          //   </Pressable><Button title="Exit App2" style={{ marginLeft: 10, marginBottom: 20 }} onPress={() => handleExitApp({ navigation })} /></>
-          // ),
         })}
       />
     </BottomTab.Navigator>

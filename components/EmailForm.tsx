@@ -33,6 +33,7 @@ export default function EmailForm() {
         name: string;
         phone: string;
         password: string;
+        imageUri?: string;
       }[] = [];
 
       if (!fileInfo.exists) {
@@ -40,11 +41,15 @@ export default function EmailForm() {
           FileSystem.documentDirectory + "formData.json",
           JSON.stringify(data),
         );
+        console.log("if data", data);
       } else {
         const fileContents = await FileSystem.readAsStringAsync(
           FileSystem.documentDirectory + "formData.json",
         );
         data = JSON.parse(fileContents);
+        console.log("else data", data);
+        console.log("Number of users:", data.length);
+        console.log("Last user:", data[data.length - 1]);
       }
 
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -296,6 +301,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingLeft: 16,
     paddingRight: 16,
+    backgroundColor: "#fafafa",
   },
   card: {
     marginBottom: 48,

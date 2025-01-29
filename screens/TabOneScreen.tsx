@@ -18,10 +18,16 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
   return (
     <View style={styles.container}>
 
-      <View style={{ marginLeft: 16}}>
+      <View style={{ marginLeft: 16 }}>
         <View style={{ flexDirection: "row", justifyContent: 'space-between'}}>
         <Text style={styles.title}>Ola Mariana Q.</Text>
-            <MaterialIcons name={'search'} size={24} color={'#313131'} style={{ marginRight: 16, marginTop: 8 }} />
+        <MaterialIcons 
+          name={'search'} 
+          size={24} 
+          color={'#313131'} 
+          style={{ marginRight: 16, marginTop: 8 }} 
+          onPress={() => navigation.navigate('Modal')} 
+        />
         </View>
         <Text style={styles.usernameTopQuestion}>O que voce procura hoje?</Text>
       </View>
@@ -59,7 +65,9 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
           <Text style={styles.tabNotSelected}>Trilhas sonoras</Text>
           <Text style={styles.tabNotSelected}>Destaque</Text>
         </View>
-        <MovieList/>
+        <View style={{ marginRight: -16 }}>
+          <MovieList/>
+        </View>
       </ScrollView>
 
     </View>
@@ -69,6 +77,7 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginTop: 16,
     // marginLeft: 34,
     // alignItems: 'center',
     // justifyContent: 'center',
